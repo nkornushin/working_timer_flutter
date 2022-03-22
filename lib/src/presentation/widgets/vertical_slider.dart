@@ -39,11 +39,7 @@ class _VerticalSliderState extends State<VerticalSlider> {
                 max: 6.0,
                 value: state.toDouble(),
                 onChanged: (v) {
-                  //context.read<TimerBloc>().add(TimerSetDuration(duration: (v.toInt() * 60 * 30)));
                   context.read<TimerSetCubit>().emit(v.toInt());
-                  // setState(() {
-                  //   timersCount = v.toInt();
-                  // });
                 },
                 divisions: 6,
               ),
